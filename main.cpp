@@ -8,4 +8,5 @@ int main(int argc, char** argv)
     grid g("test.txt");
     g.createGrid();
     g.printGrid();
+    g.printNewGrid();
 }

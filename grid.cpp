@@ -33,6 +33,12 @@ grid::grid(string filename)
     }
 }
 
+grid::~grid()
+{
+    delete myGrid;
+    delete newGrid;
+}
+
 void grid::readFile()
 {
     inFile.open(fileName);
@@ -68,10 +74,16 @@ void grid::createGrid()
 {
     readFile();
     myGrid = new char *[fileRow]; //create a 1-D array
+    newGrid = new char *[fileRow];
 
     for (int i = 0; i < fileRow; ++i)
     {
         myGrid[i] = new char[fileColumn]; //for each position in the 1-D array, we create another array in there
+    }
+
+    for (int i = 0; i < fileRow; ++i)
+    {
+        newGrid[i] = new char[fileColumn]; //for each position in the 1-D array, we create another array in there
     }
 
     //Set default grid
@@ -80,6 +92,14 @@ void grid::createGrid()
         for (int j = 0; j < fileColumn; ++j)
         {
             myGrid[i][j] = '-';
+        }
+    }
+
+    for (int i = 0; i < fileRow; ++i)
+    {
+        for (int j = 0; j < fileColumn; ++j)
+        {
+            newGrid[i][j] = '-';
         }
     }
 
@@ -94,16 +114,52 @@ void grid::createGrid()
             myGrid[i][j] = line[j];
         }
     }
+
+    //Set the copy grid
+    for (int i = 0; i < fileRow; ++i)
+    {
+        for (int j = 0; j < fileColumn; ++j)
+        {
+            newGrid[i][j] = myGrid[i][j];
+        }
+    }
 }
 
 void grid::printGrid()
 {
     cout << "My Grid: " << endl;
+    cout << " ";
+    for(int k=0; k<fileColumn; ++k)
+    {
+        cout << " " << k;
+    }
+    cout << "\n";
     for (int i = 0; i < fileRow; ++i)
     {
+        cout << i << " ";
         for (int j = 0; j < fileColumn; ++j)
         {
             cout << myGrid[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
+
+void grid::printNewGrid()
+{
+    cout << "My New Grid: " << endl;
+    cout << " ";
+    for (int k = 0; k < fileColumn; ++k)
+    {
+        cout << " " << k;
+    }
+    cout << "\n";
+    for (int i = 0; i < fileRow; ++i)
+    {
+        cout << i << " ";
+        for (int j = 0; j < fileColumn; ++j)
+        {
+            cout << newGrid[i][j] << " ";
         }
         cout << "\n";
     }

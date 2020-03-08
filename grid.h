@@ -8,6 +8,7 @@ class grid
 public:
     grid();
     grid(string filename);
+    ~grid();
 
     //File reading part
     void readFile();
@@ -18,6 +19,7 @@ public:
     //Grid part
     void createGrid();
     void printGrid();
+    void printNewGrid();
 
     ifstream inFile;
     string line;
@@ -25,4 +27,5 @@ public:
     int fileRow;
     int fileColumn;
     char **myGrid;
+    char **newGrid; //a copy grid
 };
