@@ -1,11 +1,12 @@
 #include <iostream>
 #include "file.h"
+#include "grid.h"
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
     file f("test.txt");
-    f.readFile();
-    f.printFile();
+    f.createGrid();
+    f.printGrid();
 }
