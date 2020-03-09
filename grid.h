@@ -18,8 +18,10 @@ public:
 
     //Grid part
     void createGrid();
-    void printGrid();
-    void printNewGrid();
+    void printGrid(char **grid);
+    void printNewGrid(char **grid);
+    char** getMyGrid();
+    char** getNewGrid();
 
     ifstream inFile;
     string line;

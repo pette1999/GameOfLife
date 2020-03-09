@@ -48,17 +48,6 @@ void grid::readFile()
     fileColumn = stoi(line);
 }
 
-// void file::printFile()
-// {
-//     inFile.open(fileName);
-//     cout << "File: " << endl;
-//     while (getline(inFile, line)) //while there is a line in the file
-//     {
-//         cout << line << endl;
-//     }
-//     inFile.close();
-// }
-
 int grid::getRow()
 {
     return fileRow;
@@ -125,9 +114,10 @@ void grid::createGrid()
     }
 }
 
-void grid::printGrid()
+void grid::printGrid(char **grid)
 {
     cout << "My Grid: " << endl;
+    //create x-axis scalalr and y-axis scalar
     cout << " ";
     for(int k=0; k<fileColumn; ++k)
     {
@@ -139,15 +129,16 @@ void grid::printGrid()
         cout << i << " ";
         for (int j = 0; j < fileColumn; ++j)
         {
-            cout << myGrid[i][j] << " ";
+            cout << grid[i][j] << " ";
         }
         cout << "\n";
     }
 }
 
-void grid::printNewGrid()
+void grid::printNewGrid(char **grid)
 {
     cout << "My New Grid: " << endl;
+    //create x - axis scalalr and y - axis scalar
     cout << " ";
     for (int k = 0; k < fileColumn; ++k)
     {
@@ -159,8 +150,18 @@ void grid::printNewGrid()
         cout << i << " ";
         for (int j = 0; j < fileColumn; ++j)
         {
-            cout << newGrid[i][j] << " ";
+            cout << grid[i][j] << " ";
         }
         cout << "\n";
     }
+}
+
+char** grid::getMyGrid()
+{
+    return myGrid;
+}
+
+char** grid::getNewGrid()
+{
+    return newGrid;
 }
