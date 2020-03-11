@@ -8,9 +8,11 @@ class classic
 public:
     classic();
 
-    void checkNeighnorCount(int count,char** grid, char** newGrid, int r, int c);
-    void classicMode(char** grid, char** newGrid, int row, int column);
+    void checkNeighnorCount(grid &g, int count, int r, int c);
+    void classicMode();
 
     int neighbor_count;
-    grid g;
+    int row;
+    int column;
+    bool done;
 };

@@ -5,15 +5,12 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    grid g("test.txt");
-    g.createGrid();
+    // grid g("test.txt");
+    // g.createGrid();
 
-    char **grid = g.getMyGrid();
-    char **newGrid = g.getNewGrid();
-
-    g.printGrid(grid);
-    g.printNewGrid(newGrid);
+    // char **grid = g.getMyGrid();
+    // char **newGrid = g.getNewGrid();
 
     classic c;
-    c.classicMode(grid, newGrid, g.getRow(), g.getCloumn());
+    c.classicMode();
 }

@@ -18,8 +18,12 @@ public:
 
     //Grid part
     void createGrid();
-    void printGrid(char **grid);
-    void printNewGrid(char **grid);
+    void printGrid();
+    void printNewGrid();
+    void updateMyGrid(int r, int c, char ch);
+    void updateNewGrid(int r, int c, char ch);
+    char getValueFromGrid(int r, int c);
+    char getValueFromNewGrid(int r, int c);
     char** getMyGrid();
     char** getNewGrid();
 

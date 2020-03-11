@@ -114,7 +114,7 @@ void grid::createGrid()
     }
 }
 
-void grid::printGrid(char **grid)
+void grid::printGrid()
 {
     cout << "My Grid: " << endl;
     //create x-axis scalalr and y-axis scalar
@@ -129,13 +129,13 @@ void grid::printGrid(char **grid)
         cout << i << " ";
         for (int j = 0; j < fileColumn; ++j)
         {
-            cout << grid[i][j] << " ";
+            cout << myGrid[i][j] << " ";
         }
         cout << "\n";
     }
 }
 
-void grid::printNewGrid(char **grid)
+void grid::printNewGrid()
 {
     cout << "My New Grid: " << endl;
     //create x - axis scalalr and y - axis scalar
@@ -150,13 +150,33 @@ void grid::printNewGrid(char **grid)
         cout << i << " ";
         for (int j = 0; j < fileColumn; ++j)
         {
-            cout << grid[i][j] << " ";
+            cout << newGrid[i][j] << " ";
         }
         cout << "\n";
     }
 }
 
-char** grid::getMyGrid()
+void grid::updateMyGrid(int r, int c, char ch)
+{
+    myGrid[r][c] = ch;
+}
+
+void grid::updateNewGrid(int r, int c, char ch)
+{
+    newGrid[r][c] = ch;
+}
+
+char grid::getValueFromGrid(int r, int c)
+{
+    return myGrid[r][c];
+}
+
+char grid::getValueFromNewGrid(int r, int c)
+{
+    return newGrid[r][c];
+}
+
+char **grid::getMyGrid()
 {
     return myGrid;
 }
