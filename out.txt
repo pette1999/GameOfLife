@@ -1,7 +1,7 @@
 Classic mode: 
 
 
-Generation 1
+Generation 0
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -14,7 +14,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 2
+Generation 1
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -27,7 +27,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 3
+Generation 2
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -40,7 +40,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 4
+Generation 3
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -53,7 +53,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 5
+Generation 4
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -66,7 +66,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 6
+Generation 5
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -79,7 +79,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 7
+Generation 6
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -92,7 +92,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 8
+Generation 7
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - X - - - - 
@@ -105,7 +105,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 9
+Generation 8
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - X - - - - 
@@ -118,7 +118,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 10
+Generation 9
 My New Grid: 
   0 1 2 3 4 5 6
 0 - X X - - - - 
@@ -131,7 +131,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 11
+Generation 10
 My New Grid: 
   0 1 2 3 4 5 6
 0 - X - - - - - 
@@ -144,7 +144,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 12
+Generation 11
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -157,7 +157,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 13
+Generation 12
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -170,7 +170,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 14
+Generation 13
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -183,7 +183,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 15
+Generation 14
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - X - - - 
@@ -196,7 +196,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 16
+Generation 15
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - X - - - 
@@ -209,7 +209,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 17
+Generation 16
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -222,7 +222,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 18
+Generation 17
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - X - - - 
@@ -235,7 +235,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 19
+Generation 18
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - X - - - 
@@ -248,7 +248,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 20
+Generation 19
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - X X - - 
@@ -261,7 +261,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 21
+Generation 20
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - X X X - - 
@@ -274,7 +274,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 22
+Generation 21
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - X - X - - 
@@ -287,7 +287,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 23
+Generation 22
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -300,7 +300,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 24
+Generation 23
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - X - - - - 
@@ -313,7 +313,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 25
+Generation 24
 My New Grid: 
   0 1 2 3 4 5 6
 0 - X X - X X - 
@@ -326,7 +326,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 26
+Generation 25
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - X - 
@@ -339,7 +339,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 27
+Generation 26
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -352,7 +352,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 28
+Generation 27
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -365,7 +365,7 @@ My New Grid:
 Classic mode: 
 
 
-Generation 29
+Generation 28
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 
@@ -378,7 +378,371 @@ My New Grid:
 Classic mode: 
 
 
-Generation 30
+Generation 0
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - - X - - - 
+2 - - X X - - - 
+3 - - - X - - - 
+4 - - - X X - - 
+5 - - - - - X - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 1
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - X X - - - 
+2 - - X X X - - 
+3 - - - - - - - 
+4 - - - X X - - 
+5 - - - - X - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 2
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - X - X - - 
+2 - - X - X - - 
+3 - - X - - - - 
+4 - - - X X - - 
+5 - - - X X - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 3
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - - - - - - 
+2 - X X - - - - 
+3 - - X - X - - 
+4 - - X - X - - 
+5 - - - X X - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 4
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - - - - - - 
+2 - X X X - - - 
+3 - - X - - - - 
+4 - - X - X X - 
+5 - - - X X - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 5
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - X - - - - 
+2 - X X X - - - 
+3 - - - - X - - 
+4 - - X - X X - 
+5 - - - X X X - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 6
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - X X X - - - 
+2 - X X X - - - 
+3 - X - - X X - 
+4 - - - - - - - 
+5 - - - X - X - 
+6 - - - - X - - 
+Classic mode: 
+
+
+Generation 7
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - X - - - - 
+1 - X - X - - - 
+2 X - - - - - - 
+3 - X - X X - - 
+4 - - - - - X - 
+5 - - - - X - - 
+6 - - - - X - - 
+Classic mode: 
+
+
+Generation 8
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - X - - - - 
+1 - X X - - - - 
+2 X X - X X - - 
+3 - - - - X - - 
+4 - - - X - X - 
+5 - - - - X X - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 9
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - X X - - - - 
+1 X - - - - - - 
+2 X X - X X - - 
+3 - - X - - X - 
+4 - - - X - X - 
+5 - - - - X X - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 10
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - X - - - - - 
+1 X - - X - - - 
+2 X X X X X - - 
+3 - X X - - X - 
+4 - - - X - X X 
+5 - - - - X X - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 11
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 X - - X X - - 
+2 X - - - X - - 
+3 X - - - - X X 
+4 - - X X - - X 
+5 - - - - X X X 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 12
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - - X X - - 
+2 X X - X X - - 
+3 - X - X X X X 
+4 - - - X - - - 
+5 - - - X X X X 
+6 - - - - - X - 
+Classic mode: 
+
+
+Generation 13
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - X X X - - 
+2 X X - - - - - 
+3 X X - - - X - 
+4 - - - - - - - 
+5 - - - X - X X 
+6 - - - - - X X 
+Classic mode: 
+
+
+Generation 14
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - X - - - 
+1 - X X X - - - 
+2 X - - X X - - 
+3 X X - - - - - 
+4 - - - - X X X 
+5 - - - - X X X 
+6 - - - - X X X 
+Classic mode: 
+
+
+Generation 15
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - X - - - 
+1 - X - - - - - 
+2 X - - X X - - 
+3 X X - X - - - 
+4 - - - - X - X 
+5 - - - X - - - 
+6 - - - - X - X 
+Classic mode: 
+
+
+Generation 16
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - X X X - - 
+2 X - - X X - - 
+3 X X X X - X - 
+4 - - X X X - - 
+5 - - - X X - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 17
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - X - - - 
+1 - - X - X - - 
+2 X - - - - X - 
+3 X - - - - X - 
+4 - - - - - X - 
+5 - - X - X - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 18
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - X - - - 
+1 - - - X X - - 
+2 - X - - X X - 
+3 - - - - X X X 
+4 - - - - X X - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 19
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - X X - - 
+1 - - X X - X - 
+2 - - - - - - X 
+3 - - - X - - X 
+4 - - - - X - X 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 20
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - X X X - - 
+1 - - X X - X - 
+2 - - X X X X X 
+3 - - - - - - X 
+4 - - - - - X - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 21
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - X - X - - 
+1 - X - - - - X 
+2 - - X - - - X 
+3 - - - X - - X 
+4 - - - - - - - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 22
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - X X X - X - 
+2 - - X - - X X 
+3 - - - - - - - 
+4 - - - - - - - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 23
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - X - - - - 
+1 - X X X X X X 
+2 - X X X X X X 
+3 - - - - - - - 
+4 - - - - - - - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 24
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - X X - X X - 
+1 - - - - - - X 
+2 - X - - - - X 
+3 - - X X X X - 
+4 - - - - - - - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 25
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - X - 
+1 - X X - - - X 
+2 - - X X X - X 
+3 - - X X X X - 
+4 - - - X X - - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 26
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - X X - X - X 
+2 - - - - - - X 
+3 - - - - - - - 
+4 - - X - - X - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 27
+My New Grid: 
+  0 1 2 3 4 5 6
+0 - - - - - - - 
+1 - - - - - X - 
+2 - - - - - X - 
+3 - - - - - - - 
+4 - - - - - - - 
+5 - - - - - - - 
+6 - - - - - - - 
+Classic mode: 
+
+
+Generation 28
 My New Grid: 
   0 1 2 3 4 5 6
 0 - - - - - - - 

@@ -321,6 +321,13 @@ void mirror::mirrorMode(int mode, int in_row, int in_column, double in_density, 
                     }
                 }
             }
+            // If the different with the last one is 0, then break the loop, we found the final stage
+            if (change_count == 0)
+            {
+                cout << "\n\nIt's the end, Press Enter to End" << endl;
+                cin.ignore(); //ends after the user hits enter
+                break;
+            }
             if (timeMode == 1)
             {
                 c.sleepcp(3000);
@@ -345,12 +352,6 @@ void mirror::mirrorMode(int mode, int in_row, int in_column, double in_density, 
                 {
                     g.updateMyGrid(i, j, g.getValueFromNewGrid(i, j));
                 }
-            }
-
-            // If the different with the last one is 0, then break the loop, we found the final stage
-            if (change_count == 0)
-            {
-                break;
             }
         }
     }
@@ -651,6 +652,13 @@ void mirror::mirrorMode(int mode, int in_row, int in_column, double in_density, 
                     }
                 }
             }
+            // If the different with the last one is 0, then break the loop, we found the final stage
+            if (change_count == 0)
+            {
+                cout << "\n\nIt's the end, Press Enter to End" << endl;
+                cin.ignore(); //ends after the user hits enter
+                break;
+            }
             if (timeMode == 1)
             {
                 c.sleepcp(3000);
@@ -673,12 +681,6 @@ void mirror::mirrorMode(int mode, int in_row, int in_column, double in_density, 
                 {
                     g.updateMyGrid(i, j, g.getValueFromNewGrid(i, j));
                 }
-            }
-
-            // If the different with the last one is 0, then break the loop, we found the final stage
-            if (change_count == 0)
-            {
-                break;
             }
         }
     }
