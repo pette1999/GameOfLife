@@ -7,16 +7,9 @@ using namespace std;
 grid::grid()
 {
     fileName = "";
-    //ifstream inFile(fileName);//read the file
     line = "";
     int fileRow = 0;
     int fileCloumn = 0;
-
-    // if (!inFile)
-    // {
-    //     cout << fileName << " does not exist. " << endl;
-    //     exit(1);
-    // }
 }
 
 grid::grid(string filename)
@@ -27,6 +20,7 @@ grid::grid(string filename)
     int fileRow = 0;
     int fileCloumn = 0;
 
+    // Check if the file exists
     if (!inFile)
     {
         cout << fileName << " does not exist. " << endl;
@@ -34,12 +28,14 @@ grid::grid(string filename)
     }
 }
 
+// Destructor
 grid::~grid()
 {
     delete myGrid;
     delete newGrid;
 }
 
+// Read the first two lines from the file, which are the row and column number
 void grid::readFile()
 {
     inFile.open(fileName);
@@ -49,17 +45,20 @@ void grid::readFile()
     fileColumn = stoi(line);
 }
 
+// Return row number
 int grid::getRow()
 {
     return fileRow;
 }
 
+// Return column number
 int grid::getCloumn()
 {
     return fileColumn;
 }
 
 //Grd part
+// Based on the information we got from the file, we create a 2-d array
 void grid::createGrid()
 {
     readFile();
@@ -115,6 +114,8 @@ void grid::createGrid()
     }
 }
 
+// If the user chose to have a random grid, the method would create the giid
+// Takes in row, column and density as parameter
 void grid::generateRandomGrid(int row, int column, double density)
 {
     fileRow = row;
@@ -190,10 +191,9 @@ void grid::generateRandomGrid(int row, int column, double density)
             }
         }
     }
-    cout << "There are " << count << " Xs." << endl;
-    cout << "Density: " << density << endl;
 }
 
+// Print myGrid
 void grid::printGrid()
 {
     cout << "My Grid: " << endl;
@@ -215,6 +215,7 @@ void grid::printGrid()
     }
 }
 
+// Print the new Grid
 void grid::printNewGrid()
 {
     cout << "My New Grid: " << endl;
@@ -236,6 +237,7 @@ void grid::printNewGrid()
     }
 }
 
+// Write the new Grid to a file
 void grid::writeNewToFile(string filename, int c)
 {
     ofstream fileOut;
@@ -260,31 +262,37 @@ void grid::writeNewToFile(string filename, int c)
     }
 }
 
+// Update value of myGrid at certain position
 void grid::updateMyGrid(int r, int c, char ch)
 {
     myGrid[r][c] = ch;
 }
 
+// Update value of newGrid at certain position
 void grid::updateNewGrid(int r, int c, char ch)
 {
     newGrid[r][c] = ch;
 }
 
+// Get value at certain position from myGrid
 char grid::getValueFromGrid(int r, int c)
 {
     return myGrid[r][c];
 }
 
+// Get value at certain position from newGrid
 char grid::getValueFromNewGrid(int r, int c)
 {
     return newGrid[r][c];
 }
 
+// return myGrid as a 2-d array
 char **grid::getMyGrid()
 {
     return myGrid;
 }
 
+// return newGrid as a 2-d array
 char** grid::getNewGrid()
 {
     return newGrid;

@@ -13,6 +13,7 @@ game::game()
     gameDensity = 0.0;
 }
 
+// Ask the user to input the grid size
 void game::inputGridSize()
 {
     string r = "";
@@ -26,6 +27,7 @@ void game::inputGridSize()
         cout << "Column: ";
         cin >> c;
 
+        // change string type to int type
         gridRow = stoi(r);
         gridColumn = stoi(c);
 
@@ -44,12 +46,14 @@ void game::inputGridSize()
     cout << "Your random grid is: " << gridRow << " X " << gridColumn << endl;
 }
 
+// Input input filename
 void game::inputFilename()
 {
     cout << "Please input the filename here: ";
     cin  >> gameFilename;
 }
 
+// Let the user choose the game mode
 void game::inputGameMode()
 {
     string i = "";
@@ -86,6 +90,7 @@ void game::inputGameMode()
     }
 }
 
+// Let the user to input the density
 double game::inputDensity()
 {
     string i = "";
@@ -109,6 +114,7 @@ double game::inputDensity()
     }
 }
 
+// Let the user to choose the import mode
 void game::inputMode()
 {
     string i = "";
@@ -140,12 +146,14 @@ void game::inputMode()
     }
 }
 
+// Let user to input the ourfile filename
 void game::askOutputfileName()
 {
     cout << "Please give a name for you output file: ";
     cin >> outputFilename;
 }
 
+// Let the user to choose how to dislay the results
 void game::inputRunTime()
 {
     string i = "";
@@ -183,6 +191,7 @@ void game::inputRunTime()
     }
 }
 
+// The actual game
 void game::gameStart()
 {
     inputMode();
@@ -215,17 +224,17 @@ void game::gameStart()
         inputRunTime();
         if (gamemode == 1)
         {
-            classic c(gameFilename);
+            classic c;
             c.classicMode(2, gridRow, gridColumn, gameDensity, runTimemode, outputFilename);
         }
         else if (gamemode == 2)
         {
-            doughnut d(gameFilename);
+            doughnut d;
             d.doughnutMode(2, gridRow, gridColumn, gameDensity, runTimemode, outputFilename);
         }
         else if (gamemode == 3)
         {
-            mirror m(gameFilename);
+            mirror m;
             m.mirrorMode(2, gridRow, gridColumn, gameDensity, runTimemode, outputFilename);
         }
     }

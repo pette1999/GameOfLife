@@ -21,6 +21,8 @@ classic::classic(string filename)
     classicGeneration = 0;
 }
 
+// https://stackoverflow.com/questions/4184468/sleep-for-milliseconds/4184493
+// This method would allow the program to sleep for certain seconds while running
 void classic::sleepcp(int milliseconds) // Cross-platform sleep function
 {
     clock_t time_end;
@@ -30,6 +32,7 @@ void classic::sleepcp(int milliseconds) // Cross-platform sleep function
     }
 }
 
+// A method to count the neighbor of a vell
 void classic::checkNeighnorCount(grid &g, int count, int r, int c)
 {
     //A location that has one or fewer neighbors will be empty in the next generation
@@ -54,8 +57,10 @@ void classic::checkNeighnorCount(grid &g, int count, int r, int c)
     }
 }
 
+// The classic mode
 void classic::classicMode(int mode, int in_row, int in_column, double in_density, int timeMode, string optFilename)
 {
+    // If the user chose to import a file, then we call the overwrite constructor from grid
     if(mode == 1)
     {
         grid g(classicFilename);
@@ -68,7 +73,7 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
 
         while (true)
         {
-            int change_count = 0;
+            int change_count = 0; //To check if the grid still changes
 
             for (int i = 0; i < row; ++i)
             {
@@ -354,6 +359,7 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
             }
         }
     }
+    // If the user chose to generate a random grid, then we would generate the grid using the information user inputs
     else if(mode == 2)
     {
         grid g;
@@ -632,7 +638,9 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
             }
             else if (timeMode == 2)
             {
-                cin.get(); //https://stackoverflow.com/questions/21257544/c-wait-for-user-input
+                //https://stackoverflow.com/questions/21257544/c-wait-for-user-input
+                // Allow user to hit Enter to continue
+                cin.get();
             }
             else if (timeMode == 3)
             {
