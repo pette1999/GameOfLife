@@ -18,8 +18,10 @@ public:
 
     //Grid part
     void createGrid();
+    void generateRandomGrid(int row, int column, double density);
     void printGrid();
     void printNewGrid();
+    void writeNewToFile(string fileName, int c);
     void updateMyGrid(int r, int c, char ch);
     void updateNewGrid(int r, int c, char ch);
     char getValueFromGrid(int r, int c);

@@ -1,21 +1,22 @@
 #include <iostream>
+#include <time.h>
 #include "grid.h"
 
 using namespace std;
 
 grid::grid()
 {
-    fileName = "test.txt";
-    ifstream inFile(fileName);//read the file
+    fileName = "";
+    //ifstream inFile(fileName);//read the file
     line = "";
     int fileRow = 0;
     int fileCloumn = 0;
 
-    if (!inFile)
-    {
-        cout << fileName << " does not exist. " << endl;
-        exit(1);
-    }
+    // if (!inFile)
+    // {
+    //     cout << fileName << " does not exist. " << endl;
+    //     exit(1);
+    // }
 }
 
 grid::grid(string filename)
@@ -114,6 +115,85 @@ void grid::createGrid()
     }
 }
 
+void grid::generateRandomGrid(int row, int column, double density)
+{
+    fileRow = row;
+    fileColumn = column;
+    srand(time(NULL)); //to reset rand(), to prevent getting the same random number
+    // Initialize the grid
+    myGrid = new char *[row]; //create a 1-D array
+    newGrid = new char *[column];
+
+    for (int i = 0; i < row; ++i)
+    {
+        myGrid[i] = new char[column]; //for each position in the 1-D array, we create another array in there
+    }
+
+    for (int i = 0; i < column; ++i)
+    {
+        newGrid[i] = new char[column]; //for each position in the 1-D array, we create another array in there
+    }
+
+    //Set default grid
+    for (int i = 0; i < row; ++i)
+    {
+        for (int j = 0; j < column; ++j)
+        {
+            myGrid[i][j] = '-';
+        }
+    }
+
+    for (int i = 0; i < row; ++i)
+    {
+        for (int j = 0; j < column; ++j)
+        {
+            newGrid[i][j] = '-';
+        }
+    }
+
+    // Set the grid
+    double r = 0.0;
+    for (int i = 0; i < row; ++i)
+    {
+        for (int j = 0; j < column; ++j)
+        {
+            r = rand() / (double)RAND_MAX;
+            if(r > 0 && r <= density)
+            {
+                myGrid[i][j] = 'X';
+            }
+            else
+            {
+                myGrid[i][j] = '-';
+            }
+        }
+    }
+
+    //Set the copy grid
+    for (int i = 0; i < row; ++i)
+    {
+        for (int j = 0; j < column; ++j)
+        {
+            newGrid[i][j] = myGrid[i][j];
+        }
+    }
+
+    // Check how many X
+    int count = 0;
+    for (int i = 0; i < row; ++i)
+    {
+        for (int j = 0; j < column; ++j)
+        {
+            if(myGrid[i][j] == 'X')
+            {
+                count++;
+            }
+        }
+    }
+    cout << "There are " << count << " Xs." << endl;
+    cout << "Density: " << density << endl;
+}
+
 void grid::printGrid()
 {
     cout << "My Grid: " << endl;
@@ -153,6 +233,30 @@ void grid::printNewGrid()
             cout << newGrid[i][j] << " ";
         }
         cout << "\n";
+    }
+}
+
+void grid::writeNewToFile(string filename, int c)
+{
+    ofstream fileOut;
+    fileOut.open(filename, std::ios_base::app);
+    fileOut << "Classic mode: \n\n\n";
+    fileOut << "Generation " << c << "\n";
+    fileOut << "My New Grid: \n";
+    fileOut << " ";
+    for (int k = 0; k < fileColumn; ++k)
+    {
+        fileOut << " " << k;
+    }
+    fileOut << "\n";
+    for (int i = 0; i < fileRow; ++i)
+    {
+        fileOut << i << " ";
+        for (int j = 0; j < fileColumn; ++j)
+        {
+            fileOut << newGrid[i][j] << " ";
+        }
+        fileOut << "\n";
     }
 }
 

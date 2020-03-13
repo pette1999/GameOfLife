@@ -1,16 +1,24 @@
 #include <iostream>
-#include "classic.h"
+#include "game.h"
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
-    // grid g("test.txt");
-    // g.createGrid();
+    // classic c;
+    // c.classicMode();
 
-    // char **grid = g.getMyGrid();
-    // char **newGrid = g.getNewGrid();
+    // doughnut d;
+    // d.doughnutMode();
 
-    classic c;
-    c.classicMode();
+    // mirror m;
+    // m.mirrorMode();
+
+    game g;
+    g.gameStart();
+
+    // grid g;
+    // g.generateRandomGrid(30, 40, 0.43);
+    // g.printGrid();
+    // g.printNewGrid();
 }

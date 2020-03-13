@@ -1,64 +1,32 @@
 #include <iostream>
 #include <time.h>
 #include <fstream>
-#include "classic.h"
+#include "doughnut.h"
 
 using namespace std;
 
-classic::classic()
+doughnut::doughnut()
 {
     neighbor_count = 0;
     done = false;
-    classicFilename = "test.txt";
-    classicGeneration = 0;
+    doughnutFilename = "test.txt";
+    doughnutGeneration = 0;
 }
 
-classic::classic(string filename)
+doughnut::doughnut(string filename)
 {
     neighbor_count = 0;
     done = false;
-    classicFilename = filename;
-    classicGeneration = 0;
+    doughnutFilename = filename;
+    doughnutGeneration = 0;
 }
 
-void classic::sleepcp(int milliseconds) // Cross-platform sleep function
+void doughnut::doughnutMode(int mode, int in_row, int in_column, double in_density, int timeMode, string optFilename)
 {
-    clock_t time_end;
-    time_end = clock() + milliseconds * CLOCKS_PER_SEC / 1000;
-    while (clock() < time_end)
+    classic c;
+    if (mode == 1)
     {
-    }
-}
-
-void classic::checkNeighnorCount(grid &g, int count, int r, int c)
-{
-    //A location that has one or fewer neighbors will be empty in the next generation
-    if(count < 2)
-    {
-        g.updateNewGrid(r, c, '-');
-    }
-    //A location with two neighbors remains stable
-    else if(count == 2)
-    {
-        g.updateNewGrid(r, c, g.getMyGrid()[r][c]);
-    }
-    //A location with three neighbors will contain a cell in the next generation
-    else if(count == 3)
-    {
-        g.updateNewGrid(r, c, 'X');
-    }
-    //A location with four or more neighbors will be empty in the next generation
-    else if(count > 3)
-    {
-        g.updateNewGrid(r, c, '-');
-    }
-}
-
-void classic::classicMode(int mode, int in_row, int in_column, double in_density, int timeMode, string optFilename)
-{
-    if(mode == 1)
-    {
-        grid g(classicFilename);
+        grid g(doughnutFilename);
         g.createGrid();
         g.printGrid();
         g.printNewGrid();
@@ -90,7 +58,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(row - 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j + 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i + 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -111,7 +99,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(row - 1, j - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -132,7 +140,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(0, 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 2, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -153,7 +181,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(0, column - 2) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 2, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -183,7 +231,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(row - 1, j - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j + 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -212,7 +272,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(0, j - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, j + 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -241,7 +313,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(i - 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i + 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -270,7 +354,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(i - 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i + 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -312,7 +408,7 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -321,22 +417,21 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                     }
                 }
             }
-            if(timeMode == 1)
+            if (timeMode == 1)
             {
-                sleepcp(3000);
+                c.sleepcp(3000);
             }
-            else if(timeMode == 2)
+            else if (timeMode == 2)
             {
                 cin.get();
             }
-            else if(timeMode == 3)
+            else if (timeMode == 3)
             {
-                g.writeNewToFile(optFilename, classicGeneration);
+                g.writeNewToFile(optFilename, doughnutGeneration);
             }
-            cout << "Generation " << ++classicGeneration << endl;
+            cout << "Generation " << ++doughnutGeneration << endl;
             g.printNewGrid();
             
-
             // Cover the old grid with new grid
             for (int i = 0; i < row; ++i)
             {
@@ -353,7 +448,7 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
             }
         }
     }
-    else if(mode == 2)
+    else if (mode == 2)
     {
         grid g;
         g.generateRandomGrid(in_row, in_column, in_density);
@@ -387,7 +482,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(row - 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j + 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i + 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -408,7 +523,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(row - 1, j - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -429,7 +564,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(0, 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 2, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -450,7 +605,27 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(0, column - 2) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 2, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -480,7 +655,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(row - 1, j - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(row - 1, j + 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -509,7 +696,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(0, j - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, j) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(0, j + 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -538,7 +737,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(i - 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i + 1, column - 1) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -567,7 +778,19 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        if (g.getValueFromGrid(i - 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        if (g.getValueFromGrid(i + 1, 0) == 'X')
+                        {
+                            neighbor_count++;
+                        }
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -609,7 +832,7 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
                         {
                             neighbor_count++;
                         }
-                        checkNeighnorCount(g, neighbor_count, i, j);
+                        c.checkNeighnorCount(g, neighbor_count, i, j);
                         //check if chenged
                         if (g.getValueFromGrid(i, j) != g.getValueFromNewGrid(i, j))
                         {
@@ -620,19 +843,18 @@ void classic::classicMode(int mode, int in_row, int in_column, double in_density
             }
             if (timeMode == 1)
             {
-                sleepcp(3000);
+                c.sleepcp(3000);
             }
             else if (timeMode == 2)
             {
-                cin.get(); //https://stackoverflow.com/questions/21257544/c-wait-for-user-input
+                cin.get();
             }
             else if (timeMode == 3)
             {
-                g.writeNewToFile(optFilename, classicGeneration);
+                g.writeNewToFile(optFilename, doughnutGeneration);
             }
-            cout << "Generation " << ++classicGeneration << endl;
+            cout << "Generation " << ++doughnutGeneration << endl;
             g.printNewGrid();
-            
 
             // Cover the old grid with new grid
             for (int i = 0; i < row; ++i)
